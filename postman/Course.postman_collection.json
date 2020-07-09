@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "5cc9649d-b2e2-4e8a-b023-044b7e3bc299",
+		"name": "Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createCourse",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"courseId\" :\"5\",\n\t\"courseName\" :\"spring Boot\",\n\t\"price\" : 60000,\n\n\t\"pricingStrategy\" :\n\t{\n\t\t\"free\" :\"\",\n\t\t\"oneTimePayment\" :\"\",\n\t\t\"subscription\" :\"2\"\n\t\t\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/course/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"course",
+						"create"
+					]
+				},
+				"description": "when creating a course assign any one of Pricing strategy\r\n\r\npossible values of Pricing strategy \r\n \r\n free=0,\r\n oneTimePayment=1,\r\n subscription=2\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCourses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/course/getAllCourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"course",
+						"getAllCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "coursePrice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"courseId\" :\"4\",\r\n\t\"citizenType\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/course/Price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"course",
+						"Price"
+					]
+				},
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		},
+		{
+			"name": "courseDescription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"courseId\" :\"4\",\r\n\t\"citizenType\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/course/description",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"course",
+						"description"
+					]
+				},
+
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		},
+		{
+			"name": "courseCheckout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"courseId\" :\"2\",\r\n\t\"citizenType\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/course/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"course",
+						"checkout"
+					]
+				},
+				"description": "courseId = Id of a particular course\r\ncitizenType = location of user as Input(Possible values = IND, USA, DEU)"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
