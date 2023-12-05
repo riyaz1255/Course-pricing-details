@@ -17,4 +17,6 @@ public class Price {
     private float shippingCharges;
     private float subscriptionPrice;
     private float totalCost;
+    private float taxprice;
+
 }
