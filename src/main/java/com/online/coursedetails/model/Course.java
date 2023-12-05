@@ -17,4 +17,5 @@ public class Course {
 	private String CourseName;
 	private float price;
 	private PricingStrategy pricingStrategy;
+	private String courseType;
 }
